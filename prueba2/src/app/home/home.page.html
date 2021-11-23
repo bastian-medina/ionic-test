@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card  class="purple-background">
+
+    <ion-card-header>
+      <ion-card-title style="color:white ;">
+        <center>Bienvenido</center>
+        <center>{{email}}</center>
+      </ion-card-title>
+    </ion-card-header>
+
+
+  </ion-card>
+
+  
+  <ion-slides>
+    <ion-slide>
+      <ion-button color="success">Pedir auto</ion-button>
+      <ion-button color="secondary" >Mis viajes</ion-button>
+    </ion-slide>
+    <ion-slide>
+      <ion-button color="danger">Alerta</ion-button>
+      <ion-button color="warning" >Programar</ion-button>
+    </ion-slide>
+    <ion-slide>
+      <ion-button color="tertiary">Contactos</ion-button>
+      <ion-button color="light">Mas info</ion-button>
+    </ion-slide>
+  </ion-slides>
+
+  <br>
+
+
+  <ion-card>
+    <img src="./assets/img/oferta.jpg" />
+
+
+    <ion-card-header>
+      <ion-card-subtitle>Ofertas</ion-card-subtitle>
+      <ion-card-title>¡Navidad y año nuevo!</ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+      Ofertas desde el 30% de tus viajes para el 25 y 31 de Diciembre. Exclusivo para usuarios de Te Llevo App!
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+    <img src="./assets/img/programar.jpg" />
+
+
+    <ion-card-header>
+      <ion-card-subtitle>Novedades</ion-card-subtitle>
+      <ion-card-title>Nueva funcion: Programar viajes</ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+      Desde el lunes 22 de noviembre, puedes empezar a programar tus viajes mas recurrentes, ¡qué chulada!
+    </ion-card-content>
+
+  </ion-card>
+  
+
+  <ion-card>
+    <img src="./assets/img/alerta.jpg" />
+
+
+    <ion-card-header>
+      <ion-card-subtitle>Seguridad</ion-card-subtitle>
+      <ion-card-title>Viajes seguros</ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+      El nuevo boton de "alerta", te da la confianza de llamar a la policia de tu pais en caso de alguna emergencia.
+    </ion-card-content>
+
+  </ion-card>
+
+  
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+
+    <ion-fab-button color="dark">
+      <ion-icon name="cog" ios="chevron-up-circle-outline"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+
+      <a routerLink="/delete-user/{{email}}">
+        <ion-fab-button color="light">
+          <ion-icon  name="close-circle-outline"></ion-icon>
+        </ion-fab-button>
+      </a>
+
+      <a routerLink="/change-password/{{email}}">
+        <ion-fab-button color="light">
+          <ion-icon  name="key"></ion-icon>
+        </ion-fab-button>
+      </a>
+
+      <a routerLink="/home/{{email}}">
+        <ion-fab-button color="light" >
+          <ion-icon  name="home"></ion-icon>
+        </ion-fab-button>
+      </a>
+
+      <a [routerLink]="['/login']">
+        <ion-fab-button color="light" >
+          <ion-icon  name="exit"></ion-icon>
+        </ion-fab-button>
+      </a>
+
+
+    </ion-fab-list>
+  </ion-fab>
+  
+</ion-content>

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Te Llevo App!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-grid class="grid1">
+  
+      <ion-row class="row1">
+          <ion-col>
+  
+          </ion-col>
+      </ion-row>
+  
+      <ion-row class="row2">
+          <ion-col>
+  
+          </ion-col>
+      </ion-row>
+  
+  </ion-grid>
+  
+  <ion-slide>
+      <div class="contaier-login">
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <h1>Iniciar Sesión</h1>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-list>
+
+
+                        <form [formGroup]="formularioLogin">
+
+                          <ion-item>
+                            <ion-icon name="person"></ion-icon>
+                            <ion-input formControlName="emailUser" placeholder="abc@example.cl" type="email"></ion-input>
+                          </ion-item>
+                  
+                          <br>
+                  
+                          <ion-item>
+                            <ion-icon name="key"></ion-icon>
+                            <ion-input formControlName="passUser" placeholder="password" type="password"></ion-input>
+                          </ion-item>
+                          <br>
+                  
+                          <ion-button (click)="checkUser()" expand="full" shape="round" [disabled]="formularioLogin.invalid">Ingresar</ion-button>
+                  
+                        </form>
+                  
+                        <br><br>
+                  
+                        <!-- link -->
+                        <center><a [routerLink]="['/register']">¿Aun no tienes una cuenta?</a></center>
+                      </ion-list>
+
+                      
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </div>
+  </ion-slide>
+  
+
+</ion-content>
+
+
